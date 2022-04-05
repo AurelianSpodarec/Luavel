@@ -18,6 +18,6 @@
         </div>
 
 
-        Home
+        Docs
     </body>
 </html>
