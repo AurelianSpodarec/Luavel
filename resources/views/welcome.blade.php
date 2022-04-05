@@ -16,7 +16,7 @@
             <a href="{{ url('/') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
             <a href="{{ url('/docs') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Docs</a>
         </div>
-
+    
 
         @foreach ($posts as $post)
             <h1>{{ $post->title }}</h1>
