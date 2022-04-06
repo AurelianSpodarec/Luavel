@@ -14,15 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $posts = App\Models\Post::all();
-
-    return view('welcome', [
-        "posts" => $posts
-    ]);
+    return view('index');
 });
 
-Route::get('/docs', function () {
-    return view('docs');
+Route::get('/showcase', function () {
+    return view('showcase');
+});
+
+Route::get('/blog', function () {
+    return view('blog');
 });
 
 Route::get('/dashboard', function () {
@@ -30,3 +30,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+
+
+Route::get('/docs', function () {
+    return ;// lua-documentation is under this route via web server redirect in a different repo
+});
