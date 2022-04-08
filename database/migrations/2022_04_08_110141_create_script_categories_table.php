@@ -13,14 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        // \Illuminate\Support\Facades\DB::statement('SET SESSION sql_require_primary_key=0');
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('script_categories', function (Blueprint $table) {
             $table->id();
-            
-            $table->string('title');
-            $table->string('slug');
-            $table->text('content');
-            
+
+            $table->string('name');
+            $table->string('slug')->unique();
+
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('script_categories');
     }
 };

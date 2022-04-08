@@ -46,9 +46,41 @@
         </div>
     </div>
 
+    Categories: Minecraft, GTA5
 
-    <div class="grid grid-cols-3 gap-5">
+    
+    Minecraft Tags
+    - Brewing
+    - Items
+    - Outfit
 
+    GTA5 Tags
+    - Pedestrians
+    - Cars
+    - Drifting
+    - Weapons
+
+
+    <div class="grid grid-cols-3 gap-6">
+
+
+        <x-cards.script-card 
+            title="Super Drifting Mod"
+            excerpt="The menu offers a robust amount of highly customisable features, changing how the pedestrian walks, vehicle MAX speed to a kAmiKadzE plane sent by you on a player of your choice 😜"
+            category="Minecraft"
+        />
+
+        <x-cards.script-card 
+            title="Super Drifting Mod"
+            excerpt="The menu offers a robust amount of highly customisable features, changing how the pedestrian walks, vehicle MAX speed to a kAmiKadzE plane sent by you on a player of your choice 😜"
+            category="Minecraft"
+        />
+
+        <x-cards.script-card 
+            title="Super Drifting Mod"
+            excerpt="The menu offers a robust amount of highly customisable features, changing how the pedestrian walks, vehicle MAX speed to a kAmiKadzE plane sent by you on a player of your choice 😜"
+            category="Minecraft"
+        />
 
         <x-cards.script-card 
             title="Super Drifting Mod"
