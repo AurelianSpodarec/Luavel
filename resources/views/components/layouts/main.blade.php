@@ -6,6 +6,6 @@
         {{ $slot }}
 
     </main>
-    {{-- @include('partials._footer') --}}
+    @include('partials._footer')
 
 </x-layouts.master>

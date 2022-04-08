@@ -11,6 +11,7 @@ Route::get('/', function () {
 
 Route::controller(ScriptController::class)->group(function() {
     Route::get('/scripts', 'index')->name('scripts.index');
+    Route::get('/scripts{scripts:slug}', 'show')->name('scripts.show');
 });
 
 
