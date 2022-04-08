@@ -6,16 +6,18 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+use Illuminate\Support\Str;
+
 use App\Models\ScriptCategory;
 
 class ScriptCategorySeeder extends Seeder
 {
 
-    public function createScriptCategory(string $category)
+    public function createScriptCategory(string $categoryName, $categorySlug)
     {
         ScriptCategory::factory()->create([
-            'name' => $category,
-            'slug' => $category
+            'name' => $categoryName,
+            'slug' => $categorySlug
         ]);
     }
 
@@ -24,7 +26,7 @@ class ScriptCategorySeeder extends Seeder
         $scriptCategories = ['Minecraft', 'GTA5', 'Falout', 'Haloet', 'Need for Speed'];
 
         collect($scriptCategories)->each(fn (string $category) =>
-            $this->createScriptCategory($category)
+            $this->createScriptCategory($category, Str::lower($category))
         );
     }
 }
