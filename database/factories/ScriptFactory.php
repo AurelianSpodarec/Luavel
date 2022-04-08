@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 use App\Models\User;
+use App\Models\ScriptCategory;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Script>
@@ -24,7 +25,8 @@ class ScriptFactory extends Factory
             'user_id' => User::all()->random()->id,
             'title' => $title,
             'slug' => Str::slug($title) . '-' . rand(1111, 9999),
-            'excerpt' => $this->faker->text()
+            'category_id' => ScriptCategory::all()->random()->id,
+            'excerpt' => $this->faker->paragraph(1, true)
         ];
     }
 }

@@ -48,7 +48,7 @@
 
     Categories: Minecraft, GTA5
 
-    
+
     Minecraft Tags
     - Brewing
     - Items
@@ -61,33 +61,17 @@
     - Weapons
 
 
+    {{-- make this into a x-list component --}}
     <div class="grid grid-cols-3 gap-6">
 
-
+        @foreach ($scripts as $script)
         <x-cards.script-card 
-            title="Super Drifting Mod"
-            excerpt="The menu offers a robust amount of highly customisable features, changing how the pedestrian walks, vehicle MAX speed to a kAmiKadzE plane sent by you on a player of your choice 😜"
+            title="{{ $script->title }}"
+            excerpt="{{ $script->except }}"
             category="Minecraft"
         />
-
-        <x-cards.script-card 
-            title="Super Drifting Mod"
-            excerpt="The menu offers a robust amount of highly customisable features, changing how the pedestrian walks, vehicle MAX speed to a kAmiKadzE plane sent by you on a player of your choice 😜"
-            category="Minecraft"
-        />
-
-        <x-cards.script-card 
-            title="Super Drifting Mod"
-            excerpt="The menu offers a robust amount of highly customisable features, changing how the pedestrian walks, vehicle MAX speed to a kAmiKadzE plane sent by you on a player of your choice 😜"
-            category="Minecraft"
-        />
-
-        <x-cards.script-card 
-            title="Super Drifting Mod"
-            excerpt="The menu offers a robust amount of highly customisable features, changing how the pedestrian walks, vehicle MAX speed to a kAmiKadzE plane sent by you on a player of your choice 😜"
-            category="Minecraft"
-        />
-
+        @endforeach
+        
     </div>
 
 
