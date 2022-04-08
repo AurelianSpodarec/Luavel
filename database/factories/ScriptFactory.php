@@ -21,6 +21,7 @@ class ScriptFactory extends Factory
     public function definition()
     {
         $title = $this->faker->word();
+        
         return [
             'user_id' => User::all()->random()->id,
             'title' => $title,
@@ -30,12 +31,3 @@ class ScriptFactory extends Factory
         ];
     }
 }
-
-
-// $name = $this->faker->word();
-
-//         return [
-//             'user_id' => User::all()->random()->id,
-//             'industry_id' => Industry::all()->random()->id,
-//             'name' => $name,
-//             'slug' => Str::slug($name) . '-' . rand(1111, 9999),

@@ -23,20 +23,10 @@ class DatabaseSeeder extends Seeder
             ScriptCategorySeeder::class
         ]);
 
-        $scripts = Script::factory(10)->create(
+        $scripts = Script::factory(133)->create(
             ['user_id' => $users->random()->id]
         );
        
       
     }
 }
-
-
-// $this->call([
-//     IndustrySeeder::class,
-//     PlatformSeeder::class
-// ]);
-
-// $companies = Company::factory(100)->create(
-//     ['user_id' => $users->random()->id]
-// );

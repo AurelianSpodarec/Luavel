@@ -1,8 +1,4 @@
-@props([
-    "title" => "",
-    "excerpt" => "",
-    "category" => ""
-])
+@props(['script'])
 
 <article class="rounded-2xl" style="background-color: #4f525f;">
 <div class="p-8">
@@ -11,8 +7,8 @@
     <div class="flex justify-between items-start">
 
         <div>
-            <h3 class="font-semibold text-white text-2xl">{{ $title }}</h3>
-            <span class="text-white">{{ $category }}</span>
+            <h3 class="font-semibold text-white text-2xl">{{$script->title }}</h3>
+            <span class="text-white">{{ $script->category }}</span>
         </div>
         <div class="flex"> 
             {{-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -33,7 +29,7 @@
     </header>
 
     <section class="mb-4">
-        <p class="text-md text-white">{{ $excerpt }}</p>
+        <p class="text-md text-white">{{ $script->excerpt }}</p>
     </section>
 
     <footer class="">

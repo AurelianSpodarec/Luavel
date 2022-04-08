@@ -12,7 +12,7 @@ class ScriptController extends Controller
     function index() 
     { 
         return view('scripts.index', [
-            "scripts" => Script::all()
+            "scripts" => Script::paginate(9)
         ]);
     }
 
