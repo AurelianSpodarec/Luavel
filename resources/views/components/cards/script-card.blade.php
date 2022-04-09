@@ -1,14 +1,14 @@
 @props(['script'])
 
-<article class="rounded-2xl" style="background-color: #4f525f;">
+<article class="rounded-2xl" style="background-color: #1e1e2d; border: 2px solid #0c7793;">
 <div class="p-8">
 
     <header class="mb-4">
     <div class="flex justify-between items-start">
 
         <a href="/scripts/{{ $script->slug }}" class="block">
+            <span class="text-gray-300 text-sm">{{ $script->category->name }}<span> - 2take1</span></span>
             <h3 class="font-semibold text-white text-2xl">{{$script->title }}</h3>
-            <span class="text-white">{{ $script->category->name }}</span><span> - Mod Name here</span>
         </a>
         <div class="flex"> 
             {{-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">

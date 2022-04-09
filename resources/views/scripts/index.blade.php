@@ -1,11 +1,11 @@
 <x-layouts.main>
-<div class="mx-auto px-8" style="background-color: #353543;"">
+<div class="mx-auto px-8  py-24">
 
 
-    <div class="flex justify-between items-center mb-8 pt-10">
+    <div class="flex justify-between items-center mb-8">
         <div class="text-white">
-            <h1 class="text-4xl font-bold">Lua Scripts</h1>
-            <p class="text-lg">Search hthough a robust amount of scripts to add to your game or see how they are built!</p>
+            <h1 class="text-4xl font-bold">Scripts made by users</h1>
+            <p class="text-lg">Search thougth awesme scripts to add to your game or see how they are built!</p>
         </div>
 
         <div class="flex text-white">
@@ -31,11 +31,11 @@
 
     <div class="flex justify-between items-center mb-8">
         <nav class="" aria-label="Tabs">
-            <a href="scripts" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 w-1/4 py-4 px-1 text-center border-b-2 font-medium text-sm" x-state:on="Current" x-state:off="Default" x-state-description="Current: &quot;border-indigo-500 text-indigo-600&quot;, Default: &quot;border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300&quot;">
+            <a href="scripts" class="border-transparent text-white hover:border-gray-300 w-1/4 py-4 px-1 text-center border-b-2 font-medium text-sm">
                 All
             </a>
             @foreach (App\Models\ScriptCategory::all() as $category)
-            <a href="scripts/{{ $category->slug }}" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 w-1/4 py-4 px-1 text-center border-b-2 font-medium text-sm" x-state:on="Current" x-state:off="Default" x-state-description="Current: &quot;border-indigo-500 text-indigo-600&quot;, Default: &quot;border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300&quot;">
+            <a href="scripts/{{ $category->slug }}" class="border-transparent text-white hover:border-gray-300 w-1/4 py-4 px-1 text-center border-b-2 font-medium text-sm">
                 {{ $category->name }}
             </a>
             @endforeach
@@ -57,16 +57,13 @@
     - Drifting
     - Weapons --}}
 
-
     <div class="grid grid-cols-3 gap-6">
-
         @foreach ($scripts as $script)
             <x-cards.script-card :script="$script" />
         @endforeach
-        
     </div>
 
-    {{ $scripts->links() }}
+    {{ $scripts->onEachSide(0)->links() }}
 
 
 </div>

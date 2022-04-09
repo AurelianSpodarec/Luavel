@@ -3,11 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Script\ScriptController;
 use App\Http\Controllers\UserProfileController;
+use App\Http\Controllers\IndexController;
+
+// Route::get('/', function () {
+//     return view('index');
+//     Route::get('/', 'index')->name('index')
+// });
 
 
-Route::get('/', function () {
-    return view('index');
+Route::controller(IndexController::class)->group(function() {
+    Route::get('/', 'index')->name('index');
 });
+
 
 
 Route::controller(ScriptController::class)->group(function() {

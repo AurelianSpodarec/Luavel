@@ -44,6 +44,62 @@
     </div>
     </section>
 
+
+ You must be 18+ years old to enter this page [kiss emoj of cat]
+
+ Yes I am | No hide evil
+
+    One video, complication
+
+    [angry cat pictures, jedi, cuddles]
+
+    blur the pictures, when one picture is unblured unblur all
+    when user clicks - go to pussy/video and play a gif of the cat videos
+
+    have comments made by fake cats
+    - haha yes 
+    - cutie cuite wish that was me
+
+    -- that cat pisses soo much, 
+    --- yes haha, big piss
+    -- woaaa... prrrrrr
+
+    -- chinese writing (cute cat with pink on head)
+    --- fake cat profile!
+
+
+    --- big paws
+    ---- fake paws! look its attached to him Maioo!
+    ----- LMAO Miaha Miao ha miao 
+
+    --- Prrrrrrrrrrr
+
+    --- Wish someone did that to me Mia
+    ---- Me me maio where you live Prrrrrrrrrrr
+    ---- maioooo miaooooooo
+    ---- lets jump together 
+
+    - cat profile
+
+    <section>
+    <div class="mx-auto py-8 px-8">
+
+        <div class="text-white flex justify-between items-center">
+            <h3 class="text-4xl font-bold">Hot Lua Scripts</h3>
+            <span>View All</span>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6">
+            @foreach ($scripts as $script)
+                <x-cards.script-card :script="$script" />
+            @endforeach
+        </div>
+
+    </div>
+    </section>
+
+
+
     <section id="join-discord">
     <div class="flex justify-between max-w-7xl mx-auto py-8">
        
