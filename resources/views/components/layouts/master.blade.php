@@ -3,12 +3,12 @@
     <head>
 
         <!-- Google Analytics -->
-        <script>
+        {{-- <script>
             window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
             ga('create', 'UA-XXXXX-Y', 'auto');
             ga('send', 'pageview');
         </script>
-        <script async src='https://www.google-analytics.com/analytics.js'></script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script> --}}
         <!-- End Google Analytics -->
 
 
@@ -19,12 +19,14 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="{{ asset('css/app.css', true) }}">
 
         <script src="{{ asset('js/app.js', true) }}" defer></script>
         
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased bg-[#001e26]">
 
         {{ $slot }}
         

@@ -42,7 +42,7 @@
 
         <div class="flex justify-between items-center">
             <div>
-                <a href="users/{{ $script->user_id }}"  class="flex items-center">
+                <a href="{{ "@" . "" . $script->user_id }}"  class="flex items-center">
                     <span class="sr-only">Roel Aufderehar</span>
                     <img class="h-10 w-10 rounded-2xl" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                     <span class="text-white font-semibold ml-2">{{ $script->author->name }}</span>

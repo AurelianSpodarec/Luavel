@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Script;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
 use App\Models\Script;
 
 class ScriptController extends Controller

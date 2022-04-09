@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ScriptController;
+use App\Http\Controllers\Script\ScriptController;
 use App\Http\Controllers\UserProfileController;
 
 
@@ -19,8 +19,8 @@ Route::controller(ScriptController::class)->group(function() {
 
 // @ = user/
 Route::controller(UserProfileController::class)->group(function() {
-    Route::get('/users', 'index')->name('userProfile.index');
-    Route::get('/users/{user}', 'show')->name('userProfile.show');
+    Route::get('/@', 'index')->name('userProfile.index');
+    Route::get('/@{user}', 'show')->name('userProfile.show');
 });
 
 
