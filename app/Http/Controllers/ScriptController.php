@@ -16,8 +16,11 @@ class ScriptController extends Controller
         ]);
     }
 
-    function show() {
-        
+    function show(Script $script) 
+    {
+        return view('scripts.show', [
+            "script" => $script
+        ]);
     }
 
 }

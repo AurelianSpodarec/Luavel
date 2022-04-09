@@ -23,9 +23,7 @@ class DatabaseSeeder extends Seeder
             ScriptCategorySeeder::class
         ]);
 
-        $scripts = Script::factory(133)->create(
-            ['user_id' => $users->random()->id]
-        );
+        $scripts = Script::factory(133)->create();
        
       
     }
