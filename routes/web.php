@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ScriptController;
+use App\Http\Controllers\UserProfileController;
 
 
 Route::get('/', function () {
@@ -12,6 +13,14 @@ Route::get('/', function () {
 Route::controller(ScriptController::class)->group(function() {
     Route::get('/scripts', 'index')->name('scripts.index');
     Route::get('/scripts/{script:slug}', 'show')->name('scripts.show');
+});
+
+
+
+// @ = user/
+Route::controller(UserProfileController::class)->group(function() {
+    Route::get('/users', 'index')->name('userProfile.index');
+    Route::get('/users/{user}', 'show')->name('userProfile.show');
 });
 
 

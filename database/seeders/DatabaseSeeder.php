@@ -24,7 +24,5 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $scripts = Script::factory(133)->create();
-       
-      
     }
 }

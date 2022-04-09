@@ -8,7 +8,7 @@
 
         <a href="/scripts/{{ $script->slug }}" class="block">
             <h3 class="font-semibold text-white text-2xl">{{$script->title }}</h3>
-            <span class="text-white">{{ $script->category_id }}</span>
+            <span class="text-white">{{ $script->category->name }}</span><span> - Mod Name here</span>
         </a>
         <div class="flex"> 
             {{-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -42,10 +42,10 @@
 
         <div class="flex justify-between items-center">
             <div>
-                <a href="#"  class="flex items-center">
+                <a href="users/{{ $script->user_id }}"  class="flex items-center">
                     <span class="sr-only">Roel Aufderehar</span>
                     <img class="h-10 w-10 rounded-2xl" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
-                    <span class="text-white font-semibold ml-2">Aurelian Spodarec</span>
+                    <span class="text-white font-semibold ml-2">{{ $script->author->name }}</span>
                 </a>
             </div>
             {{-- <div class="flex"> 
