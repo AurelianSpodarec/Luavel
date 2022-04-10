@@ -23,4 +23,19 @@ class ScriptController extends Controller
         ]);
     }
 
+    public function create()
+    {
+        return view('scripts.create');
+    }
+
+    public function store()
+    {
+        
+    }
+
+    public function destroy()
+    {
+
+    }
+
 }

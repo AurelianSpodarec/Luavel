@@ -26,8 +26,8 @@ Route::controller(ScriptController::class)->group(function() {
 
 // @ = user/
 Route::controller(UserProfileController::class)->group(function() {
-    Route::get('/@', 'index')->name('userProfile.index');
-    Route::get('/@{user}', 'show')->name('userProfile.show');
+    Route::get('/@', 'index')->name('user-profile.index');
+    Route::get('/@{user}', 'show')->name('user-profile.show');
 });
 
 

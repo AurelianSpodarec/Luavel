@@ -1,4 +1,4 @@
-<div class="text-gray-200 bg-brand-500 py-2 text-center text-sm">
+<div class="text-black bg-brand-500 py-2 text-center text-sm">
     Luavel beta is out! Discover more about it on about page
 </div>
 
@@ -36,7 +36,7 @@
             </a>
 
             <div class="-mr-2 flex items-center md:hidden">
-            <button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+            <button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-500" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
                 <span class="sr-only">Open main menu</span>
                 <svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -76,7 +76,7 @@
             @if(Auth::check())
             <div class="js-dropdown-wrap relative z-30">
     
-                <button type="button" class="js-dropdown-button rounded-full flex items-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="user-menu-button" x-ref="button" @click="onButtonClick()" @keyup.space.prevent="onButtonEnter()" @keydown.enter.prevent="onButtonEnter()" aria-expanded="true" aria-haspopup="true" x-bind:aria-expanded="open.toString()" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+                <button type="button" class="js-dropdown-button rounded-full flex items-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500" id="user-menu-button" x-ref="button" @click="onButtonClick()" @keyup.space.prevent="onButtonEnter()" @keydown.enter.prevent="onButtonEnter()" aria-expanded="true" aria-haspopup="true" x-bind:aria-expanded="open.toString()" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
                     <span class="text-white">{{ Auth::user()->name }}</span>
 
                     <span class="sr-only">Open user menu</span>
@@ -110,7 +110,7 @@
             <a href="/login" class="text-base font-medium text-gray-300 hover:text-gray-900">
                 Sign in
             </a>
-            <a href="/register" class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#5900ff] hover:bg-blue-700">
+            <a href="/register" class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black bg-brand-500 hover:bg-blue-700">
                 Sign up
             </a>
             @endif
@@ -128,11 +128,11 @@
         
             <div class="px-5 pt-4 flex items-center justify-between">
             <div>
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-brand-500.svg" alt="">
             </div>
 
             <div class="-mr-2">
-            <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle">
+            <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-500" @click="toggle">
                 <span class="sr-only">Close menu</span>
                 <svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -149,7 +149,7 @@
             <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>            
         </div>
 
-        <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
+        <a href="#" class="block w-full px-5 py-3 text-center font-medium text-brand-500 bg-gray-50 hover:bg-gray-100">
             Log in
         </a>
         </div>

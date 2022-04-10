@@ -29,7 +29,7 @@
     </header>
 
     <section class="mb-4">
-        <p class="text-md text-[#c6c6c6]">{{ $script->excerpt }}</p>
+        <p class="text-md text-[#cacaca]">{{ $script->excerpt }}</p>
     </section>
 
     <footer class="">
