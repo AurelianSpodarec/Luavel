@@ -12,8 +12,16 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            maxWidth: {
+                '8xl'  : '86rem',
+                '9xl'  : '90rem',
+                '10xl' : '94rem',
+            }
         },
     },
 
     plugins: [require('@tailwindcss/forms')],
 };
+
+// text-brand
+// bg-color-brand
