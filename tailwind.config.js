@@ -16,7 +16,13 @@ module.exports = {
                 '8xl'  : '86rem',
                 '9xl'  : '90rem',
                 '10xl' : '94rem',
-            }
+            },
+            colors: {
+                brand: {
+                    '500' : 'orange'
+                }
+            },
+
         },
     },
 
@@ -25,3 +31,5 @@ module.exports = {
 
 // text-brand
 // bg-color-brand
+
+// Brand Blue: 5900ff

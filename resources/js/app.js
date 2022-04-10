@@ -14,6 +14,8 @@ document.addEventListener("turbo:load", function(event) {
 
 
 
+
+});
     
 
 // console.log(particlesJS)
@@ -145,7 +147,5 @@ document.addEventListener("turbo:load", function(event) {
 
 
 
-
-});
 
 
