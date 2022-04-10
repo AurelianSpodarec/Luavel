@@ -1,5 +1,5 @@
 <div class="text-black bg-brand-500 py-2 text-center text-sm">
-    Luavel beta is out! Discover more about it on about page
+   Work in progress {{-- Luavel beta is out! Discover more about it on about page --}}
 </div>
 
 <header class="relative">
@@ -46,7 +46,7 @@
 
             <nav class="ml-8 hidden md:flex md:space-x-10">
                 
-                <a href="/scripts" class="text-base font-medium text-gray-300 hover:text-gray-900">Scripts</a>
+                {{-- <a href="/scripts" class="text-base font-medium text-gray-300 hover:text-gray-900">Scripts</a> --}}
                 <a href="/docs/" target="_blank" class="text-base font-medium text-gray-300 hover:text-gray-900">Documentation</a>
                 {{-- <a href="#" class="text-base font-medium text-gray-300 hover:text-gray-900">Packages</a> --}}
                 {{-- <a href="#" class="text-base font-medium text-gray-300 hover:text-gray-900">Game Dev</a> --}}
@@ -107,12 +107,12 @@
                
             </div>
             @else
-            <a href="/login" class="text-base font-medium text-gray-300 hover:text-gray-900">
+            {{-- <a href="/login" class="text-base font-medium text-gray-300 hover:text-gray-900">
                 Sign in
             </a>
             <a href="/register" class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black bg-brand-500 hover:bg-blue-700">
                 Sign up
-            </a>
+            </a> --}}
             @endif
 
         </div>

@@ -2,7 +2,7 @@
 
      
     <section id="join-discord">
-    <div class="flex justify-between max-w-7xl mx-auto py-8">
+    <div class="flex justify-between max-w-7xl mx-auto py-16">
         
 
         <div class="text-center mx-auto py-20">
@@ -15,13 +15,13 @@
                 Explore Awesome Lua scripts for games made by others and check out the Lua Documentation
             </p>
             <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-                <div class="rounded-md shadow">
+                {{-- <div class="rounded-md shadow">
                 <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-500 hover:bg-brand-500 md:py-4 md:text-lg md:px-10">
                     View Scripts
                 </a>
-                </div>
+                </div> --}}
                 <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-brand-500 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                <a href="/docs" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
                     Lua Docs
                 </a>
                 </div>
@@ -45,42 +45,7 @@
     </section>
 
 
- You must be 18+ years old to enter this page [kiss emoj of cat]
-
- Yes I am | No hide evil
-
-    One video, complication
-
-    [angry cat pictures, jedi, cuddles]
-
-    blur the pictures, when one picture is unblured unblur all
-    when user clicks - go to pussy/video and play a gif of the cat videos
-
-    have comments made by fake cats
-    - haha yes 
-    - cutie cuite wish that was me
-
-    -- that cat pisses soo much, 
-    --- yes haha, big piss
-    -- woaaa... prrrrrr
-
-    -- chinese writing (cute cat with pink on head)
-    --- fake cat profile!
-
-
-    --- big paws
-    ---- fake paws! look its attached to him Maioo!
-    ----- LMAO Miaha Miao ha miao 
-
-    --- Prrrrrrrrrrr
-
-    --- Wish someone did that to me Mia
-    ---- Me me maio where you live Prrrrrrrrrrr
-    ---- maioooo miaooooooo
-    ---- lets jump together 
-
-    - cat profile
-
+{{-- 
     <section>
     <div class="mx-auto py-8 px-8">
 
@@ -96,10 +61,10 @@
         </div>
 
     </div>
-    </section>
+    </section> --}}
 
 
-
+{{-- 
     <section id="join-discord">
     <div class="flex justify-between max-w-7xl mx-auto py-8">
        
@@ -110,11 +75,11 @@
         [view docs]
 
         {{-- pic --}}
-    </div>
+    {{-- </div>
     </section>
-    
+     --}}
 
-    <section id="join-discord" class="bg-[#5865f2]">
+    <section id="join-discord" class="bg-brand-500">
     <div class="flex justify-between max-w-7xl mx-auto py-8">
 
 
