@@ -22,9 +22,9 @@
             @if(Auth::check())
             <div>
                 {{-- upload/new/[script, project, package] --}}
-                <button class="ml-8 inline-block items-center justify-center px-5 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-brand-500 hover:bg-brand-600">
+                <a href="{{ route('scripts.create') }}" class="ml-8 inline-block items-center justify-center px-5 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-brand-500 hover:bg-brand-600">
                     Post a script
-                </button>
+                </a>
             </div>
             @endif
 

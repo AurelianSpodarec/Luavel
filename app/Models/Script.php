@@ -10,6 +10,15 @@ class Script extends Model
 {
     use HasFactory;
 
+
+    protected $fillable = [
+        'user_id',
+        'category_id',
+        'excerpt',
+        'slug', // remove this once the slug is auto generated
+        'title'
+    ];
+
     public function category()
     {
         return $this->belongsTo(ScriptCategory::class, 'category_id');

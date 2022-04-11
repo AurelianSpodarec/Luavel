@@ -6,7 +6,7 @@
     <header class="mb-4">
     <div class="flex justify-between items-start">
 
-        <a href="/scripts/{{ $script->slug }}" class="block">
+        <a href="{{ route('scripts.show', $script->slug) }}" class="block">
             <span class="text-gray-300 text-sm">{{ $script->category->name }}<span> - 2take1</span></span>
             <h3 class="font-semibold text-white text-2xl hover:text-brand-500">{{$script->title }}</h3>
         </a>
@@ -42,7 +42,7 @@
 
         <div class="flex justify-between items-center">
             <div>
-                <a href="{{ "@" . "" . $script->user_id }}"  class="flex items-center">
+                <a href="{{ route('user-profile.show', $script->user_id)}}"  class="flex items-center">
                     <span class="sr-only">Roel Aufderehar</span>
                     <img class="h-10 w-10 rounded-2xl" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                     <span class="text-[#c6c6c6] hover:text-brand-500 font-semibold ml-2">{{ $script->author->name }}</span>

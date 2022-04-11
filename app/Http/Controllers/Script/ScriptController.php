@@ -12,7 +12,7 @@ class ScriptController extends Controller
     public function index() 
     { 
         return view('scripts.index', [
-            "scripts" => Script::paginate(9)
+            "scripts" => Script::latest()->paginate(9)
         ]);
     }
 
@@ -28,9 +28,28 @@ class ScriptController extends Controller
         return view('scripts.create');
     }
 
-    public function store()
+    public function store(Script $script)
     {
-        
+        // request()->validate([
+        //     'category_id' => 'sometimes',
+        //     'title' => 'required',
+        //     // $table->foreignId('category_id');
+
+        //     // $table->string('title');
+        //     // $table->string('slug')->unique();
+        //     // $table->text('excerpt');
+        // ]);
+
+        $script->create([
+            'user_id' => request()->user()->id,
+            'category_id' => 1,
+            'slug' => 'sasssa',
+            'excerpt' => 'sjkddddddddddddd',
+            'title' => request('title')
+        ]);
+
+
+        return redirect()->route('scripts.index');
     }
 
     public function destroy()

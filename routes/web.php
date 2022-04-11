@@ -19,6 +19,8 @@ Route::controller(IndexController::class)->group(function() {
 
 Route::controller(ScriptController::class)->group(function() {
     Route::get('/scripts', 'index')->name('scripts.index');
+    Route::get('/scripts/create', 'create')->name('scripts.create');
+    Route::post('/scripts', 'store')->name('scripts.store');
     Route::get('/scripts/{script:slug}', 'show')->name('scripts.show');
 });
 
