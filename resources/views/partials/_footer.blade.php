@@ -1,4 +1,4 @@
-<footer class="bg-[#1b1b1b]">
+<footer class="bg-[#131313]">
 <div class="mx-auto pt-20 pb-12 px-4 sm:px-6 lg:px-8">
 
     <div class="flex justify-between items-center mb-20 pb-24 border-b border-gray-500">
@@ -20,8 +20,9 @@
 
     <div class="flex justify-between items-center">
         <nav>
+            <a href="/scripts" class="text-lg pr-10 font-medium text-white hover:text-gray-900">Discord</a>
             <a href="/scripts" class="text-lg pr-10 font-medium text-white hover:text-gray-900">Scripts</a>
-            <a href="/scripts" class="text-lg pr-10 font-medium text-white hover:text-gray-900">Documentation</a>
+            <a href="/docs" class="text-lg pr-10 font-medium text-white hover:text-gray-900">Documentation</a>
             <a href="/scripts" class="text-lg pr-10 font-medium text-white hover:text-gray-900">Terms & Conditions</a>
         </nav>
 

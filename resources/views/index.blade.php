@@ -78,7 +78,7 @@
     {{-- </div>
     </section>
      --}}
-
+{{-- 
     <section id="join-discord" class="bg-brand-500">
     <div class="flex justify-between max-w-7xl mx-auto py-8">
 
@@ -99,7 +99,7 @@
 
         
     </div>
-    </section>
+    </section> --}}
 
 
 {{-- 

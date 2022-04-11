@@ -2,7 +2,7 @@
     Luavel beta is out! Discover more about it on about page
 </div>
 
-<header class="relative">
+<header class="relative bg-[#131313]">
 <div>
 
     <div class="absolute inset-0 shadow-sm z-20 pointer-events-none" aria-hidden="true"></div>
