@@ -15,11 +15,11 @@
                 Explore Awesome Lua scripts for games made by others and check out the Lua Documentation
             </p>
             <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-                {{-- <div class="rounded-md shadow">
-                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-500 hover:bg-brand-500 md:py-4 md:text-lg md:px-10">
+                <div class="rounded-md shadow">
+                <a href="#" class="transition duration-500 ease-out shadow-[0_0_25px_0_#ffffff] hover:shadow-[0_0_35px_0_#ffffff] w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-brand-500 hover:bg-brand-500 md:py-4 md:text-lg md:px-10">
                     View Scripts
                 </a>
-                </div> --}}
+                </div>
                 <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                 <a href="/docs" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
                     Lua Docs
