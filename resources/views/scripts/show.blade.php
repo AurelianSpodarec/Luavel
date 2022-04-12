@@ -75,7 +75,7 @@
                 <div class="bg-[#1b1b1b] p-4">
                     <span class="text-white text-sm mb-4 block">Maker</span>
 
-                    <a href="{{ "@" . "" . $script->user_id }}" class="flex items-center">
+                    <a href="{{ route('user-profile.show', $script->author->username) }}" class="flex items-center">
                         <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                         <div class="ml-2">
                             <span class="block text-sm text-white font-bold">{{ $script->author->name }}</span>

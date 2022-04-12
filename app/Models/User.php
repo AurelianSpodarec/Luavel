@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Script::class, 'user_id');
     }
+
+    // public function username()
+    // {
+    //     return $this->belongsTo(User::class, 'user_id');
+    // }
 }
