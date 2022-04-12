@@ -25,21 +25,20 @@ Route::controller(ScriptController::class)->group(function() {
 });
 
 
-
-// @ = user/
 Route::controller(UserProfileController::class)->group(function() {
     Route::get('/@', 'index')->name('user-profile.index');
     Route::get('/@{user}', 'show')->name('user-profile.show');
 });
 
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
 
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 
 Route::get('/docs', function () {

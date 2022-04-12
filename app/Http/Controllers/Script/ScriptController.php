@@ -43,9 +43,9 @@ class ScriptController extends Controller
         $script->create([
             'user_id' => request()->user()->id,
             'category_id' => 1,
-            'slug' => 'sasssa',
+            'title' => request('title'),
+            'slug' => request('title') . "-" . rand(1111, 9999),
             'excerpt' => 'sjkddddddddddddd',
-            'title' => request('title')
         ]);
 
 

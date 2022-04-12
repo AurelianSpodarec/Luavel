@@ -12,7 +12,8 @@
             
             <div class="mb-6">
                 {{-- Category, menu name --}}
-                <span class="text-white">Minecraft</span>
+                <span class="text-white">GTA5</span>
+                <span class="text-white">- 2take1</span>
                 <h1 class="text-white text-5xl font-bold">{{ $script->title }}</h1>
                 <p class="text-white">{{ $script->excerpt }}<p>
                 {{-- tags --}}
@@ -42,27 +43,16 @@
 
         <section class="grid grid-cols-3 gap-6">
           
-                  {{-- picture(optional) --}}
-
             <div class="col-span-2">
-              
-                <div class="bg-[#1b1b1b] p-4">
-                <img class="rounded-lg w-full" src="https://ph-files.imgix.net/95520b38-78fb-43bf-9a4c-b461b67dca88.jpeg?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=635&h=380&fit=max&bg=0fff&dpr=1" />       
+                
+                @if($script->thumbnail)
+                <div class="bg-[#1b1b1b] p-4 mb-8">
+                    <img class="rounded-lg w-full" src="{{ $script->thumbnail }}" />       
                 </div>
+                @endif
+
                 <div class="text-gray-300">
-                {{ $script->description }}
-                Kek's menu is a 2take1 lua script.
-The aim is to deliver a script that is stable and fills the gaps in the vanilla feature set of 2take1.
-Whether you like to mess with people, help people out or just try to be low-key, this script offers something useful.
-Kek's menu is available in 10 languages.
-
-The feature list will be structured like the script is.
-This means you can figure out where features are located based on the structure of this document.
-Example: General settings > Settings > Save to default
-If there's anything confusing or vague in the feature list, feel free to suggest improvements.
-I'm open to people translating this to another language. You have to speak the language fluently.
-
-The feature list isn't finished yet.
+                    {{ $script->description }}
                 </div>
                 
             </div>

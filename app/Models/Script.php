@@ -15,7 +15,7 @@ class Script extends Model
         'user_id',
         'category_id',
         'excerpt',
-        'slug', // remove this once the slug is auto generated
+        'slug',
         'title'
     ];
 

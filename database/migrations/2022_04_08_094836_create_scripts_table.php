@@ -16,12 +16,10 @@ return new class extends Migration
 
             $table->string('title');
             $table->string('slug')->unique();
+            $table->string('thumbnail');
+            $table->text('description');
             $table->text('excerpt');
             
-            // tags specific to the category
-            // views
-            // rating
-
             $table->timestamps();
         });
     }
