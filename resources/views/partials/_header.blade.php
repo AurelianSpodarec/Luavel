@@ -76,7 +76,7 @@
             @if(Auth::check())
             <div class="js-dropdown-wrap relative z-30">
     
-                <button type="button" class="js-dropdown-button rounded-full flex items-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500" id="user-menu-button" x-ref="button" @click="onButtonClick()" @keyup.space.prevent="onButtonEnter()" @keydown.enter.prevent="onButtonEnter()" aria-expanded="true" aria-haspopup="true" x-bind:aria-expanded="open.toString()" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+                <button type="button" class="js-dropdown-button rounded-full flex items-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500" id="user-menu-button">
                     <span class="text-white">{{ Auth::user()->name }}</span>
 
                     <span class="sr-only">Open user menu</span>
@@ -86,24 +86,26 @@
                     </span>
 
                 </button>
-            
-                {{-- <div class="js-dropdown-menu invisible origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 py-1 focus:outline-none" x-ref="menu-items" x-description="Dropdown menu, show/hide based on menu state." x-bind:aria-activedescendant="activeDescendant" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()" @keydown.tab="open = false" @keydown.enter.prevent="open = false; focusButton()" @keyup.space.prevent="open = false; focusButton()">
-                    <a href="#" class="block py-2 px-4 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">
+                {{-- {{ route('user-profile.show', $script->author->username) }} --}}
+                <div class="js-dropdown-menu origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 py-1 focus:outline-none" x-ref="menu-items" x-description="Dropdown menu, show/hide based on menu state." x-bind:aria-activedescendant="activeDescendant" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()" @keydown.tab="open = false" @keydown.enter.prevent="open = false; focusButton()" @keyup.space.prevent="open = false; focusButton()">
+                    <a href="{{ route('user-profile.show', Auth::user()->username) }}" class="block py-2 px-4 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">
                         Profile
                     </a>
-                    <a href="{{ route('dashboard.index') }}" class="block py-2 px-4 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">
-                        Dashboard
+                    <hr>
+                    <a href="{{ route('logout') }}" class="block py-2 px-4 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">
+                        Edit Profile
                     </a>
-                    <a href="{{ route('account/settings') }}" class="block py-2 px-4 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">
+                    <a href="{{ route('logout') }}" class="block py-2 px-4 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">
                         Account Settings
                     </a>
+                    <hr>
                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="block py-2 px-4 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">
                         Sign out
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
-                </div> --}}
+                </div>
                
             </div>
             @else

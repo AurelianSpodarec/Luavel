@@ -5,6 +5,7 @@ use App\Http\Controllers\Script\ScriptController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\IndexController;
 
+use App\Http\Controllers\Account\GeneralController;
 // Route::get('/', function () {
 //     return view('index');
 //     Route::get('/', 'index')->name('index')
@@ -15,6 +16,13 @@ Route::controller(IndexController::class)->group(function() {
     Route::get('/', 'index')->name('index');
 });
 
+// Account
+Route::controller(GeneralController::class)->group(function() {
+    // Route::get('/account', 'index')->name('account.index');
+    Route::get('/account/edit', 'edit')->name('account.edit');
+    Route::get('/account', 'store')->name('account.store');
+    Route::get('/account', 'show')->name('account.show');
+});
 
 
 Route::controller(ScriptController::class)->group(function() {

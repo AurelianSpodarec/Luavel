@@ -25,12 +25,14 @@ class ScriptController extends Controller
 
     public function create()
     {
+        // only if authenticated
         return view('scripts.create');
     }
 
     public function store(Script $script)
     {
-        // request()->validate([
+        request()->validate([
+            'thumbnail' => 'sometimes'
         //     'category_id' => 'sometimes',
         //     'title' => 'required',
         //     // $table->foreignId('category_id');
@@ -38,14 +40,16 @@ class ScriptController extends Controller
         //     // $table->string('title');
         //     // $table->string('slug')->unique();
         //     // $table->text('excerpt');
-        // ]);
+        ]);
 
         $script->create([
             'user_id' => request()->user()->id,
             'category_id' => 1,
             'title' => request('title'),
+            'thumbnail' => 'sometimes',
             'slug' => request('title') . "-" . rand(1111, 9999),
             'excerpt' => 'sjkddddddddddddd',
+            'description' => 'sometimes'
         ]);
 
 

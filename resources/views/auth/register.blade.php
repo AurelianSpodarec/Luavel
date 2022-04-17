@@ -15,9 +15,9 @@
 
             <!-- Name -->
             <div>
-                <x-objects.label for="name" :value="__('Name')" />
+                <x-objects.label for="username" :value="__('Username')" />
 
-                <x-objects.input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                <x-objects.input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus />
             </div>
 
             <!-- Email Address -->

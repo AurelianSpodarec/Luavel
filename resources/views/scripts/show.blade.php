@@ -79,7 +79,7 @@
                         <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                         <div class="ml-2">
                             <span class="block text-sm text-white font-bold">{{ $script->author->name }}</span>
-                            <span class="block text-sm text-white">I love building things that</span>
+                            {{-- <span class="block text-sm text-white">I love building things that</span> --}}
                         </div>
                     </a>
 
