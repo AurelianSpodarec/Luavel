@@ -1,0 +1,130 @@
+// @import '../../styles/mixins/button';
+// @import '../../styles/constants/index.scss';
+
+
+.button {
+    padding: 10px;
+    background-color: red;
+}
+
+// .button {
+//     @include button-size();
+//     margin: 5px;
+//     cursor: pointer;
+//     appearance: none;
+//     outline: none;
+//     -webkit-appearance: none;
+//     font-weight: 500;
+//     border-width: 2px;
+//     font-family: inherit;
+
+//     &.small {
+//         @include button-size(10px, 10px);
+//     }
+
+//     &.large {
+//         @include button-size(22px, 40px, 16px);
+//     }
+
+//     &.outline {
+//         &.primary {
+//             @include button($primary, transparent, $primary);
+//         }
+
+//         &.success {
+//             @include button($success, transparent, $success);
+//         }
+
+//         &.warning {
+//             @include button($warning, transparent, $warning);
+//         }
+
+//         &.danger {
+//             @include button($danger, transparent, $danger);
+//         }
+
+//         &.brand {
+//             @include button($brand, transparent, $brand);
+//         }
+
+//         &.white {
+//             @include button($black, $white, #ccc);
+//         }
+//     }
+
+//     &.solid {
+//         &.primary {
+//             @include button($white, $primary, $primary);
+//         }
+
+//         &.secondary {
+//             @include button($grey-medium, $secondary, $secondary);
+//         }
+
+//         &.success {
+//             @include button($white, $success);
+//         }
+
+//         &.warning {
+//             @include button($white, $warning);
+//         }
+
+//         &.danger {
+//             @include button($white, $danger);
+//         }
+
+//         &.brand {
+//             @include button($white, $brand);
+//         }
+
+//         &.white {
+//             @include button($black, $white, #ccc);
+//         }
+//     }
+
+//     &.clear {
+//         &.primary {
+//             @include button($primary, transparent);
+//         }
+
+//         &.success {
+//             @include button($success, transparent);
+//         }
+
+//         &.warning {
+//             @include button($warning, transparent);
+//         }
+
+//         &.danger {
+//             @include button($danger, transparent);
+//         }
+
+//         &.brand {
+//             @include button($brand, transparent);
+//         }
+
+//         &.white {
+//             @include button($black, transparent);
+//         }
+//     }
+
+//     &.radius-none {
+//         border-radius: 0;
+//     }
+
+//     &.radius-small {
+//         border-radius: 5px;
+//     }
+
+//     &.radius-medium {
+//         border-radius: 10px;
+//     }
+
+//     &.radius-large {
+//         border-radius: 15px;
+//     }
+
+//     &.radius-full {
+//         border-radius: 100%;
+//     }
+// }

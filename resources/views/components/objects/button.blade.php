@@ -20,8 +20,10 @@
     );
 @endphp
 
-{{-- {{ ddd($button['types']['button']) }} --}}
 
-<button type="{{ $type }}" {{ $attributes->merge(['class' => "button {$variant} {$kind} {$radius} {$size}" ]) }}>
+{{-- check if value exists --}}
+{{-- {{ ddd($interface_button['types'][$type]) }} --}}
+
+<button type="{{ $type }}" {{ $attributes->merge(['class' => "button {$variant} {$kind} {$size} radius-{$radius}" ]) }}>
     {{ $slot ? $label : $slot}}
 </button>
