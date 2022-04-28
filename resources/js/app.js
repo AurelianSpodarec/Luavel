@@ -1,9 +1,13 @@
 require('./bootstrap');
 
-
-import 'particles.js/particles.js';
-
 import * as Turbo from "@hotwired/turbo";
+
+import {
+    Dropdown, 
+    HomeHero, 
+    MainCategorySelect, 
+    Select
+} from "./components/index";
 
 
 Turbo.start()
@@ -12,11 +16,12 @@ Turbo.setProgressBarDelay(250)
 
 document.addEventListener("turbo:load", function(event) {
 
-
-
+    // MainCategorySelect();
+    // HomeHero();
+    Dropdown();
+    // Select();
 
 });
-    
 
 // console.log(particlesJS)
 // // import * as Turbo from "@hotwired/turbo";

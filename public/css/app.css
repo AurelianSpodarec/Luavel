@@ -1228,9 +1228,6 @@ select {
 .pt-\[2px\] {
   padding-top: 2px;
 }
-.pl-1 {
-  padding-left: 0.25rem;
-}
 .pt-4 {
   padding-top: 1rem;
 }
@@ -1260,6 +1257,9 @@ select {
 }
 .pb-6 {
   padding-bottom: 1.5rem;
+}
+.pl-1 {
+  padding-left: 0.25rem;
 }
 .text-center {
   text-align: center;
@@ -1519,13 +1519,25 @@ body {
 }
 
 .button {
-  padding: 10px;
-  background-color: red;
+  font-family: inherit;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
-
 .turbo-progress-bar {
   background-color: orange;
   box-shadow: 0px 0px 9px 0px #ffa500;
+}
+
+.js-dropdown-menu {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-open {
+  visibility: visible;
+  opacity: 1;
 }
 
 .focus-within\:outline-none:focus-within {

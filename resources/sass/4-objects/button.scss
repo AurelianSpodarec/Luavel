@@ -3,18 +3,26 @@
 // ==========================================================================
 
 .button {
-    padding: 10px;
-    background-color: red;
+    font-family: inherit;
+    outline: none; 
+    appearance: none;
+    
+    &.outline {
+
+    }
+
+    &.solid {
+
+    }
+
+    &.clear {
+
+    }
+
 }
 
 // .button {
 //     @include button-size();
-//     margin: 5px;
-//     cursor: pointer;
-//     appearance: none;
-//     outline: none;
-//     -webkit-appearance: none;
-//     font-weight: 500;
 //     border-width: 2px;
 //     font-family: inherit;
 

@@ -49,3 +49,11 @@
 
 // Hotfix ⚠️
 // ==========================================================================
+
+.js-dropdown-menu {
+    @apply opacity-0 invisible;
+}
+
+.is-open {
+    @apply opacity-100 visible;
+}
