@@ -1,9 +1,9 @@
 <x-layouts.main>
-<div class="mx-auto px-8  py-24">
+<div class="mx-auto px-8 py-12 md:py-20">
 
 
-    <div class="flex justify-between items-center mb-8">
-        <div class="text-white">
+    <div class="md:flex justify-between items-center mb-8">
+        <div class="mb-8 md:mb-0 text-white">
             <h1 class="text-4xl font-bold">Scripts made by users</h1>
             <p class="text-lg">Search thougth awesme scripts to add to your game or see how they are built!</p>
         </div>
@@ -64,7 +64,7 @@
     - Drifting
     - Weapons --}}
 
-    <div class="grid grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         @foreach ($scripts as $script)
             <x-cards.script-card :script="$script" />
         @endforeach

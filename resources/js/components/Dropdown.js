@@ -4,17 +4,6 @@ const CLASS_NAME_SHOW = 'show';
 const AUTO_CLOSE = true;
 
 
-const SelectEngine = {
-
-    select(item) {
-        return item;
-    },
-
-    selectAll(item) {
-        return document.querySelectorAll(item)
-    }
-}
-
 
 
 function Dropdown() {

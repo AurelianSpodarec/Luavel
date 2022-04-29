@@ -1,5 +1,5 @@
 <x-layouts.main>
-<div class="mx-auto max-w-5xl bg-[#101010] border-3 border-[#212121] px-8 rounded-xl  py-12 my-20">
+<div class="mx-auto max-w-5xl md:bg-[#101010] border-3 border-[#212121] px-8 rounded-xl  py-12 md:mt-20">
     {{-- border: 2px solid #212121; --}}
     {{-- background: #101010; --}}
     {{-- look at steam for isnpiration --}}
@@ -7,7 +7,7 @@
     {{-- collections of scripts - with most rating? --}}
 
     <article class="">
-        <header class="flex justify-between items-start mb-8">
+        <header class="md:flex justify-between items-start mb-8">
 
             
             <div class="mb-6">
@@ -19,7 +19,7 @@
                 {{-- tags --}}
             </div>  
 
-            <div class="max-w-[360px] flex flex-wrap items-start justify-end">
+            <div class=",d:max-w-[360px] flex flex-wrap items-start md:justify-end">
                 <a href="#" style="margin: 6px 0 6px 12px;" class="border-2 border-[#3b3633] text-gray-300 px-3 py-2 font-medium text-sm rounded-md" aria-current="page">
                     Weapons
                 </a>
@@ -41,27 +41,33 @@
       
         </header>
 
-        <section class="grid grid-cols-3 gap-6">
+        <section class="flex flex-col-reverse md:grid md:grid-cols-3 gap-6">
           
-            <div class="col-span-2">
-                
-                @if($script->thumbnail)
-                <div class="bg-[#1b1b1b] p-4 mb-8">
-                    <img class="rounded-lg w-full" src="{{ $script->thumbnail }}" />       
-                </div>
-                @endif
+            <div class="md:col-span-2">
 
-                <div class="text-gray-300">
-                    {{ $script->description }}
+                <div>
+                    @if($script->thumbnail)
+                    <div class="bg-[#1b1b1b] p-4 mb-8">
+                        <img class="rounded-lg w-full" src="{{ $script->thumbnail }}" />       
+                    </div>
+                    @endif
+
+                    <div class="text-gray-300">
+                        {{ $script->description }}
+                    </div>
                 </div>
-                
-            </div>
-                {{-- feature list --}}
+
+
+
+                   {{-- feature list --}}
     
                 {{-- share --}}
                     {{-- user comments --}}
+                
+            </div>
+             
 
-            <aside class="col-span-1">
+            <aside class="md:col-span-1">
 
                 <div class="flex text-white mb-4">
                     <button class="min-w-[100px] inline-block items-center justify-center px-5 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white border border-brand-500 hover:bg-brand-600">

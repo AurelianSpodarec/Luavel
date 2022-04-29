@@ -1,11 +1,11 @@
 <x-layouts.main>
 
      
-    <section id="join-discord">
-    <div class="flex justify-between max-w-7xl mx-auto py-16">
+    <section id="join-discord" class="px-6">
+    <div class="flex justify-between max-w-7xl mx-auto py-12 md:py-44">
         
         
-        <div class="text-center mx-auto py-20">
+        <div class="text-center mx-auto ">
             <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
                 <span class="block xl:inline">The best Lua community</span>
                 <!-- space -->
@@ -17,7 +17,7 @@
             <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
                 <div class="rounded-md shadow">
                     
-                    <x-objects.button label="h~~~~~~~~~~~~#########ello" />
+                    {{-- <x-objects.button label="h~~~~~~~~~~~~#########ello" /> --}}
 
                     <a href="#" class="transition duration-500 ease-out shadow-[0_0_25px_0_#ffffff] hover:shadow-[0_0_35px_0_#ffffff] w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-brand-500 hover:bg-brand-500 md:py-4 md:text-lg md:px-10">
                     View Scripts

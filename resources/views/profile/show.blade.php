@@ -7,11 +7,11 @@
         <div class="absolute top-0 right-0 bottom-0 left-0 bg-black opacity-80"></div>
 
         <div class="flex items-center relative z-10">
-            <img src="https://cdn.dribbble.com/users/1997192/avatars/normal/f4a8360e90be7c63e27096f075d5c5e1.png?1592063135" />
+            <img class="rounded-md" src="https://cdn.dribbble.com/users/1997192/avatars/normal/f4a8360e90be7c63e27096f075d5c5e1.png?1592063135" />
 
             <div class="ml-4">
                 <h1 class="text-white text-3xl font-semibold">{{ $user->name }}</h1>
-                {{ $user->created_at->diffForHumans() }}
+                <span class="text-white">{{ $user->created_at->diffForHumans() }}</span>
             </div>
         </div>
 
@@ -36,9 +36,9 @@
     </section>
 
 
-    <section class="text-white px-8 mt-8">
+    <section class="text-white px-8 mt-8 mb-12">
         {{-- {{ $user->scripts }} --}}
-        <div class="grid grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         @foreach ($user->scripts as $script)
             <x-cards.script-card :script="$script" />
         @endforeach

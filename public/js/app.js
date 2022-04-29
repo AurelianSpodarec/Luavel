@@ -5710,14 +5710,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var CLASS_NAME_SHOW = 'show';
 var AUTO_CLOSE = true;
-var SelectEngine = {
-  select: function select(item) {
-    return item;
-  },
-  selectAll: function selectAll(item) {
-    return document.querySelectorAll(item);
-  }
-};
 
 function Dropdown() {
   var dropdownWrap = document.querySelectorAll('.js-dropdown-wrap');

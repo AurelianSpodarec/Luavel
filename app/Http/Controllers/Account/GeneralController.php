@@ -10,7 +10,7 @@ class GeneralController extends Controller
 {
     public function show()
     {
-
+        return view('account.general.show');
     }
     public function edit(User $user)
     {

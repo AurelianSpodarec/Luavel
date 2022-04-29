@@ -72,7 +72,7 @@
                     </defs>
                 </svg>
             </a> --}}
-            <div class="js-dropdown-wrap relative z-30">
+            {{-- <div class="js-dropdown-wrap relative z-30">
     
                 <button type="button" class="js-dropdown-button rounded-full flex items-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500" id="user-menu-button">
                     <span class="js-select-text text-white">Select</span>
@@ -80,23 +80,23 @@
                 </button>
                 <ul class="js-dropdown-menu origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 py-1 focus:outline-none" x-ref="menu-items" x-description="Dropdown menu, show/hide based on menu state." x-bind:aria-activedescendant="activeDescendant" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()" @keydown.tab="open = false" @keydown.enter.prevent="open = false; focusButton()" @keyup.space.prevent="open = false; focusButton()">
                     <li class="block py-2 px-4 text-sm text-gray-700">
-                        <span>Black</span>
+                        <span class="js-select-value">Black</span>
                     </li>
                     <li class="block py-2 px-4 text-sm text-gray-700">
-                        <span>GReen</span>
+                        <span class="js-select-value">GReen</span>
                     </li>
                     <li class="block py-2 px-4 text-sm text-gray-700">
-                        <span>Blue</span>
+                        <span class="js-select-value">Blue</span>
                     </li>
                 </ul>
             
-            </div>
+            </div> --}}
 
             @if(Auth::check())
             <div class="js-dropdown-wrap relative z-30">
     
                 <button type="button" class="js-dropdown-button rounded-full flex items-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500" id="user-menu-button">
-                    <span class="text-white">{{ Auth::user()->name }}</span>
+                    <span class="text-white mr-2">{{ Auth::user()->username }}</span>
                     <span class="sr-only">Open user menu</span>
                     <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                 </button>
