@@ -1,9 +1,5 @@
-
-const CLASS_NAME_SHOW = 'show';
-
-const AUTO_CLOSE = true;
-
-
+import { OPEN } from "../config/constants";
+import { isInputEsc } from "../helpers/inputManager";
 
 
 function Dropdown() {
@@ -12,15 +8,15 @@ function Dropdown() {
     if(dropdownWrap) {
     
         const openDropdown = (event, menu) => {
-            menu.classList.add('is-open');
+            menu.classList.add(OPEN);
         }
 
         const closeDropdown = (event, menu) => {
-            menu.classList.remove('is-open')
+            menu.classList.remove(OPEN)
         }
 
         const toggleDropdown = (event, menu, isOpen) => {
-            menu.classList.toggle('is-open')
+            menu.classList.toggle(OPEN)
         }
 
         function onClickAwayCloseDropdown(event, menu, button) {
@@ -31,13 +27,20 @@ function Dropdown() {
             }
         }
 
+        function isEscPressed(event, menu, button) {
+            if(isInputEsc(event)) {
+                closeDropdown(event, menu);
+            }
+        }
+
         dropdownWrap.forEach(wrap => {
             const menu = wrap.querySelector('.js-dropdown-menu')
             const button = wrap.querySelector('.js-dropdown-button')
-            const isOpen = wrap.classList.contains('is-open')
+            const isOpen = wrap.classList.contains(OPEN)
 
             button.addEventListener('click', event => toggleDropdown(event, menu, isOpen));
             document.addEventListener('click', event => onClickAwayCloseDropdown(event, menu, button));
+            document.addEventListener('keydown', event => isEscPressed(event, menu));
         })
 
     }

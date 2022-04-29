@@ -5708,8 +5708,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var CLASS_NAME_SHOW = 'show';
-var AUTO_CLOSE = true;
+/* harmony import */ var _config_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../config/constants */ "./resources/js/config/constants.js");
+/* harmony import */ var _helpers_inputManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helpers/inputManager */ "./resources/js/helpers/inputManager.js");
+
+
 
 function Dropdown() {
   var dropdownWrap = document.querySelectorAll('.js-dropdown-wrap');
@@ -5723,27 +5725,36 @@ function Dropdown() {
       }
     };
 
+    var isEscPressed = function isEscPressed(event, menu, button) {
+      if ((0,_helpers_inputManager__WEBPACK_IMPORTED_MODULE_1__.isInputEsc)(event)) {
+        closeDropdown(event, menu);
+      }
+    };
+
     var openDropdown = function openDropdown(event, menu) {
-      menu.classList.add('is-open');
+      menu.classList.add(_config_constants__WEBPACK_IMPORTED_MODULE_0__.OPEN);
     };
 
     var closeDropdown = function closeDropdown(event, menu) {
-      menu.classList.remove('is-open');
+      menu.classList.remove(_config_constants__WEBPACK_IMPORTED_MODULE_0__.OPEN);
     };
 
     var toggleDropdown = function toggleDropdown(event, menu, isOpen) {
-      menu.classList.toggle('is-open');
+      menu.classList.toggle(_config_constants__WEBPACK_IMPORTED_MODULE_0__.OPEN);
     };
 
     dropdownWrap.forEach(function (wrap) {
       var menu = wrap.querySelector('.js-dropdown-menu');
       var button = wrap.querySelector('.js-dropdown-button');
-      var isOpen = wrap.classList.contains('is-open');
+      var isOpen = wrap.classList.contains(_config_constants__WEBPACK_IMPORTED_MODULE_0__.OPEN);
       button.addEventListener('click', function (event) {
         return toggleDropdown(event, menu, isOpen);
       });
       document.addEventListener('click', function (event) {
         return onClickAwayCloseDropdown(event, menu, button);
+      });
+      document.addEventListener('keydown', function (event) {
+        return isEscPressed(event, menu);
       });
     });
   }
@@ -5888,6 +5899,73 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Dropdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dropdown */ "./resources/js/components/Dropdown.js");
 
 
+
+/***/ }),
+
+/***/ "./resources/js/config/constants.js":
+/*!******************************************!*\
+  !*** ./resources/js/config/constants.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "OPEN": () => (/* binding */ OPEN)
+/* harmony export */ });
+var OPEN = 'is-open';
+
+/***/ }),
+
+/***/ "./resources/js/config/keyCodes.js":
+/*!*****************************************!*\
+  !*** ./resources/js/config/keyCodes.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  enter: 13,
+  esc: 27,
+  upArrow: 38,
+  rightArrow: 39,
+  downArrow: 40,
+  leftArrow: 37
+});
+
+/***/ }),
+
+/***/ "./resources/js/helpers/inputManager.js":
+/*!**********************************************!*\
+  !*** ./resources/js/helpers/inputManager.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isInputEnter": () => (/* binding */ isInputEnter),
+/* harmony export */   "isInputEsc": () => (/* binding */ isInputEsc)
+/* harmony export */ });
+/* harmony import */ var _config_keyCodes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../config/keyCodes */ "./resources/js/config/keyCodes.js");
+// =======================================================
+// JS: Input Manager
+// =======================================================
+ // InputManager.isInputEsc(event)
+// isInput('enter', event)
+
+var isInputEsc = function isInputEsc(event) {
+  if (!event) return;
+  if (event.keyCode === _config_keyCodes__WEBPACK_IMPORTED_MODULE_0__["default"].esc) return true;
+};
+var isInputEnter = function isInputEnter(event) {
+  if (!event) return;
+  if (event.keyCode === _config_keyCodes__WEBPACK_IMPORTED_MODULE_0__["default"].enter) return true;
+};
 
 /***/ }),
 
