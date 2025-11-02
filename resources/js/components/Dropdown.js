@@ -2,48 +2,78 @@ import { OPEN } from "../config/constants";
 import { isInputEsc } from "../helpers/inputManager";
 
 
-function Dropdown() {
-    const dropdownWrap = document.querySelectorAll('.js-dropdown-wrap');
+class BaseComponent {
+    constructor() {
+      
+    }
+}
 
-    if(dropdownWrap) {
-    
-        const openDropdown = (event, menu) => {
-            menu.classList.add(OPEN);
-        }
+class Dropdown extends BaseComponent {
+    constructor() {
+        super()
+    }
+}
 
-        const closeDropdown = (event, menu) => {
-            menu.classList.remove(OPEN)
-        }
+class Select extends BaseComponent {
+    constructor() {
+        super()
+    }
+}
 
-        const toggleDropdown = (event, menu, isOpen) => {
-            menu.classList.toggle(OPEN)
-        }
 
-        function onClickAwayCloseDropdown(event, menu, button) {
-            const clickInside = button.contains(event.target);
-    
-            if (!clickInside) {
-                closeDropdown(event, menu);
-            }
-        }
+const BaseComponent = {
+    openDropdown() {
 
-        function isEscPressed(event, menu, button) {
-            if(isInputEsc(event)) {
-                closeDropdown(event, menu);
-            }
-        }
+    },
+    closeDropdown() {
 
-        dropdownWrap.forEach(wrap => {
-            const menu = wrap.querySelector('.js-dropdown-menu')
-            const button = wrap.querySelector('.js-dropdown-button')
-            const isOpen = wrap.classList.contains(OPEN)
-
-            button.addEventListener('click', event => toggleDropdown(event, menu, isOpen));
-            document.addEventListener('click', event => onClickAwayCloseDropdown(event, menu, button));
-            document.addEventListener('keydown', event => isEscPressed(event, menu));
-        })
+    },
+    onClickAwayCloseDropdown() {
 
     }
+}
+
+function Dropdown() {
+    const dropdownWrap = document.querySelectorAll('.js-dropdown-wrap');
+    if(!dropdownWrap.length) return
+    
+    const openDropdown = (event, menu) => {
+        menu.classList.add(OPEN);
+    }
+
+    const closeDropdown = (event, menu) => {
+        menu.classList.remove(OPEN)
+    }
+
+    const toggleDropdown = (event, menu, isOpen) => {
+        menu.classList.toggle(OPEN)
+    }
+
+    function onClickAwayCloseDropdown(event, menu, button) {
+        const clickInside = button.contains(event.target);
+
+        if (!clickInside) {
+            closeDropdown(event, menu);
+        }
+    }
+
+    function isEscPressed(event, menu, button) {
+        if(isInputEsc(event)) {
+            closeDropdown(event, menu);
+        }
+    }
+
+    dropdownWrap.forEach(wrap => {
+        const menu = wrap.querySelector('.js-dropdown-menu')
+        const button = wrap.querySelector('.js-dropdown-button')
+        const isOpen = wrap.classList.contains(OPEN)
+
+        button.addEventListener('click', event => toggleDropdown(event, menu, isOpen));
+        document.addEventListener('click', event => onClickAwayCloseDropdown(event, menu, button));
+        document.addEventListener('keydown', event => isEscPressed(event, menu));
+    })
+
+    
 }
 
 export default Dropdown;
